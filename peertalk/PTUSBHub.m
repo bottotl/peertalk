@@ -1,4 +1,4 @@
-#import "PTUSBHub.h"
+#import "public/PTUSBHub.h"
 #import "PTPrivate.h"
 
 #include <netinet/in.h>

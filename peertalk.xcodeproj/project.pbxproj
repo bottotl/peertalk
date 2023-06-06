@@ -291,14 +291,10 @@
 		6A88FA39150D613800FC3647 /* peertalk */ = {
 			isa = PBXGroup;
 			children = (
-				EE158A7C1CBD402600A3E3F0 /* Peertalk.h */,
-				AB1C5CA8257B96E200F41941 /* PTDefines.h */,
+				F49161CF2A2FAD69004A7415 /* public */,
 				5E2C5023171F46A6008A9752 /* PTPrivate.h */,
-				6ACFD2D4151D36220081ACF5 /* PTChannel.h */,
 				6ACFD2D5151D36220081ACF5 /* PTChannel.m */,
-				6A88FA5C150D61DE00FC3647 /* PTProtocol.h */,
 				6A88FA5D150D61DE00FC3647 /* PTProtocol.m */,
-				6A88FA5E150D61DE00FC3647 /* PTUSBHub.h */,
 				6A88FA5F150D61DE00FC3647 /* PTUSBHub.m */,
 				AB6C99A9257BB91300D5624E /* Info.plist */,
 			);
@@ -345,6 +341,18 @@
 				AB6C9A3B257BDCEB00D5624E /* Cocoa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F49161CF2A2FAD69004A7415 /* public */ = {
+			isa = PBXGroup;
+			children = (
+				EE158A7C1CBD402600A3E3F0 /* Peertalk.h */,
+				AB1C5CA8257B96E200F41941 /* PTDefines.h */,
+				6ACFD2D4151D36220081ACF5 /* PTChannel.h */,
+				6A88FA5C150D61DE00FC3647 /* PTProtocol.h */,
+				6A88FA5E150D61DE00FC3647 /* PTUSBHub.h */,
+			);
+			path = public;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -511,10 +519,9 @@
 			};
 			buildConfigurationList = 6A88FA2A150D613800FC3647 /* Build configuration list for PBXProject "peertalk" */;
 			compatibilityVersion = "Xcode 12.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
