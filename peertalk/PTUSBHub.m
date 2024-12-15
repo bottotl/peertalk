@@ -141,6 +141,8 @@ static NSString *kPlistPacketTypeConnect = @"Connect";
 // The underlying file descriptor.
 @property (readonly) dispatch_fd_t fileDescriptor;
 
+@property (nonatomic) dispatch_fd_t socket;
+
 // Send data
 - (void)sendDispatchData:(dispatch_data_t)data callback:(void(^)(NSError*))callback;
 - (void)sendData:(NSData*)data callback:(void(^)(NSError*))callback;
@@ -354,7 +356,7 @@ static NSString *kPlistPacketTypeConnect = @"Connect";
     if (error) *error = [[NSError alloc] initWithDomain:NSPOSIXErrorDomain code:errno userInfo:nil];
     return NO;
   }
-  
+  self.socket = fd;
   channel_ = dispatch_io_create(DISPATCH_IO_STREAM, fd, queue_, ^(int error) {
     close(fd);
     if (onEnd) {
